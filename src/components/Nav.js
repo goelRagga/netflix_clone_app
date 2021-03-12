@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
 import '../styles/Nav.css';
 
 function Nav() {
   const [show, handleShow] = useState(false);
+  const history=useHistory();
   
 
   const transitionNavBar = () => {
@@ -28,7 +30,7 @@ function Nav() {
           alt='Netflix Logo'
         />
         <img
-          
+          onClick={() => history.push("/profile")}
           className='nav__avatar'
           src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png'
           alt='Profile'

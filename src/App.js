@@ -38,7 +38,7 @@ console.log(user, "newuser");
 
 
   return (
-    <div className='app'>
+    <div className='App'>
      <Router>
         {!user ? (
           <LoginScreen />
