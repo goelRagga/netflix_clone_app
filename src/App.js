@@ -27,12 +27,12 @@ function App() {
           email: userAuth.email,
         }))
       }else{
-        dispatch(logout);
+        dispatch(logout());
       }
     })
     return unsubscribe;
 
-  },[]);
+  },[dispatch]);
  
 console.log(user, "newuser");
 
